@@ -1,10 +1,5 @@
-# Megadraft [![Build Status](https://secure.travis-ci.org/globocom/megadraft.png?branch=master)](https://travis-ci.org/globocom/megadraft) [![npm version](https://img.shields.io/npm/v/megadraft.svg?style=flat)](https://www.npmjs.com/package/megadraft)
-
-Rich Text editor built on top of draft.js (Work in Progress)
-
-## Discussion and Support
-
-Join the [#megadraft][megadraft-slack] channel on the DraftJS [Slack team][draftjs-slack]!
+# BookEditor 
+Book editor built on top of MegaDraft and draft.js (Work in Progress)
 
 ## Live Example & Documentation
 
@@ -15,8 +10,8 @@ Checkout the [website](http://globocom.github.io/megadraft/)!
 To run the development server and see the examples:
 
 ```
-git clone https://github.com/globocom/megadraft.git
-cd megadraft/
+git clone https://github.com/vkefallinos/BookEditor.git
+cd BookEditor/
 make setup
 make run
 ```
