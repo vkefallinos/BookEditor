@@ -13,7 +13,6 @@ import Media from "./Media";
 import DEFAULT_PLUGINS from "../plugins/default";
 import DEFAULT_ACTIONS from "../actions/default";
 
-
 export default class MegadraftEditor extends Component {
   constructor(props) {
     super(props);

@@ -10,7 +10,7 @@ import {
   convertFromRaw,
   EditorState,
   getVisibleSelectionRect} from "draft-js";
-
+import {stateToHTML} from 'draft-js-export-html';
 import decorator from "./decorator";
 
 
@@ -18,6 +18,24 @@ export function editorStateToJSON(editorState) {
   if (editorState) {
     const content = editorState.getCurrentContent();
     return JSON.stringify(convertToRaw(content), null, 2);
+  }
+}
+
+export function editorStateToHTML(editorState) {
+  let options = {
+    blockRenderers: {
+      ATOMIC: (block) => {
+        console.log(block)
+        let data = block.getData();
+        if (data.foo === 'bar') {
+          return '<div>' + escape(block.getText()) + '</div>';
+        }
+      },
+    },
+  };
+  if (editorState) {
+    const content = editorState.getCurrentContent();
+    return stateToHTML(content, options);
   }
 }
 

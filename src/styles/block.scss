@@ -13,7 +13,26 @@
     border-radius: 4px;
   }
 }
-
+.block__small {
+  width: 20%;
+  min-width: 120px
+}
+.block__medium {
+  width: 50%;
+  min-width: 120px
+}
+.block__big {
+  width: 100%;
+}
+.block__center {
+  margin: auto;
+}
+.block__left {
+  margin-right: auto;
+}
+.block__right {
+  margin-left: auto;
+}
 .block__wrapper {
   user-select: none;
   background-color: #fff;

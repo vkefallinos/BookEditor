@@ -12,7 +12,7 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 import {grey300, grey900, white, indigo500} from "material-ui/styles/colors";
 
 import {MegadraftEditor} from "../../src/Megadraft";
-import {editorStateToJSON, editorStateFromRaw} from "../../src/utils";
+import {editorStateToJSON,editorStateToHTML, editorStateFromRaw} from "../../src/utils";
 import {highlightCode} from "./highlightCode";
 
 import INITIAL_CONTENT from "./contentExample";
@@ -94,6 +94,15 @@ class Example extends React.Component {
             <pre className="jsonpreview">
               <code className="json hljs">
                 {editorStateToJSON(this.state.value)}
+              </code>
+            </pre>
+          </div>
+        </Tab>
+        <Tab label="Content HTML" onActive={this.onHtmlActive} value="c" icon={icon_code}>
+          <div className="tab-container-json">
+            <pre className="jsonpreview">
+              <code className="json hljs">
+                {editorStateToHTML(this.state.value)}
               </code>
             </pre>
           </div>
